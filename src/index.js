@@ -1,3 +1,5 @@
+/* global L:false */
+
 require('leaflet-geowiki/editor')
 
 window.onload = () => {
