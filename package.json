@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "build": "browserify src/index.js -o dist/geowiki-test.js",
+    "watch": "watchify --debug src/index.js -o dist/geowiki-test.js -v"
+  },
+  "dependencies": {
+    "leaflet": "^1.5.1",
+    "leaflet-draw": "^1.0.4",
+    "leaflet-geowiki": "*"
+  },
+  "devDependencies": {
+    "browserify": "^16.2.3",
+    "watchify": "^3.11.1"
+  }
+}
