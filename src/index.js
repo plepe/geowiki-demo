@@ -4,7 +4,6 @@ const { saveAs } = require('file-saver')
 
 require('leaflet')
 require('leaflet-geowiki/editor')
-require('leaflet-toolbar')
 
 let FileControl = L.Control.extend({
   options: {
