@@ -27,7 +27,7 @@ let FileControl = L.Control.extend({
     var reader = new FileReader()
     reader.onload = (e) => {
       var contents = e.target.result
-      this.options.onopen(contents)
+      this.options.onopen(file.name, contents)
     }
     reader.readAsText(file)
   }
@@ -41,10 +41,8 @@ window.onload = () => {
   }).addTo(map)
 
   new FileControl({
-    onopen (contents) {
-      let data = JSON.parse(contents)
-
-      geowiki.load(data, err => {
+    onopen (filename, contents) {
+      geowiki.load(filename, contents, err => {
         if (err) {
           console.error(err)
         }
@@ -53,7 +51,7 @@ window.onload = () => {
     onsave () {
       let files = geowiki.save()
       files.forEach(filedata => {
-        let contents = JSON.stringify(filedata.contents, null, '  ')
+        let contents = filedata.contents
 
         let blob = new Blob([ contents ], {
           type: 'application/vnd.geo+json;charset=utf-8'
