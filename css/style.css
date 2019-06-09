@@ -1,0 +1,16 @@
+#map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 251px;
+  bottom: 0;
+}
+#sidebar {
+  position: absolute;
+  top: 0;
+  width: 245px;
+  right: 0;
+  bottom: 0;
+  border-left: 1px solid black;
+  padding: 2px;
+}
