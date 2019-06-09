@@ -8,9 +8,10 @@
 #sidebar {
   position: absolute;
   top: 0;
-  width: 245px;
+  width: 246px;
   right: 0;
   bottom: 0;
   border-left: 1px solid black;
   padding: 2px;
+  overflow-y: auto;
 }
