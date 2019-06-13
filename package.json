@@ -1,4 +1,7 @@
 {
+  "name": "geowiki-demo",
+  "version": "0.0.1",
+  "description": "Demo application for leaflet-geowiki",
   "scripts": {
     "build": "browserify src/index.js -o dist/geowiki-test.js",
     "lint": "standard --fix src/*.js",
@@ -15,5 +18,8 @@
     "browserify": "^16.2.3",
     "standard": "^12.0.1",
     "watchify": "^3.11.1"
-  }
+  },
+  "repository": "https://github.com/plepe/geowiki-demo",
+  "author": "Stephan Bösch-Plepelits <skunk@xover.mud.at>",
+  "license": "GPL-3.0"
 }
