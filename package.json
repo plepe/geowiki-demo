@@ -8,7 +8,7 @@
     "file-saver": "^2.0.2",
     "leaflet": "^1.5.1",
     "leaflet-draw": "^1.0.4",
-    "leaflet-geowiki": "*"
+    "leaflet-geowiki": "https://github.com/plepe/leaflet-geowiki"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.8.2",
