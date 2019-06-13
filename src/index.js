@@ -34,7 +34,7 @@ let FileControl = L.Control.extend({
 })
 
 window.onload = () => {
-  var map = L.map('map').setView([ 48.2006, 16.3673 ], 16)
+  var map = L.map('map').setView([ 0, 0 ], 3)
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -42,7 +42,8 @@ window.onload = () => {
 
   new FileControl({
     onopen (filename, contents) {
-      geowiki.load(filename, contents, err => {
+      geowiki.load(filename, contents, (err, result) => {
+        map.fitBounds(geowiki.getBounds())
         if (err) {
           console.error(err)
         }
