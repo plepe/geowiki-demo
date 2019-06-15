@@ -4,6 +4,7 @@
   "description": "Demo application for leaflet-geowiki",
   "scripts": {
     "build": "browserify src/index.js -o dist/geowiki-test.js",
+    "install": "npm run build",
     "lint": "standard --fix src/*.js",
     "watch": "watchify --debug src/index.js -o dist/geowiki-test.js -v"
   },
