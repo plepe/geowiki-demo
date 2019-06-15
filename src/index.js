@@ -12,7 +12,7 @@ let FileControl = L.Control.extend({
   onAdd (map) {
     let dom = document.createElement('div')
     dom.className = 'leaflet-bar'
-    dom.innerHTML = '<a><label style="width: 100%; height: 100%; display: inline-block;"><input type="file" id="openAction" style="position: fixed; top: -1000px;"><i class="fas fa-folder-open"></i></label></a>' +
+    dom.innerHTML = '<a><label style="width: 100%; height: 100%; display: inline-block;"><input type="file" multiple="multiple" id="openAction" style="position: fixed; top: -1000px;"><i class="fas fa-folder-open"></i></label></a>' +
       '<a id="downloadAction"><i class="fas fa-download"></i></a>'
     dom.querySelector('#openAction').onchange = e => this.readFile(e)
     dom.querySelector('#downloadAction').onclick = e => this.options.onsave(e)
@@ -20,16 +20,14 @@ let FileControl = L.Control.extend({
   },
   // adapted from https://stackoverflow.com/a/26298948
   readFile (e) {
-    var file = e.target.files[0]
-    if (!file) {
-      return
-    }
-    var reader = new FileReader()
-    reader.onload = (e) => {
-      var contents = e.target.result
-      this.options.onopen(file.name, contents)
-    }
-    reader.readAsText(file)
+    Array.from(e.target.files).forEach(file => {
+      var reader = new FileReader()
+      reader.onload = (e) => {
+        var contents = e.target.result
+        this.options.onopen(file.name, contents)
+      }
+      reader.readAsText(file)
+    })
   }
 })
 
