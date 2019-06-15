@@ -1,5 +1,5 @@
 # geowiki-demo
-A small web app for testing leaflet-geowiki
+A small web app for testing [leaflet-geowiki](https://github.com/plepe/leaflet-geowiki). You can load/save several Geowiki files at once.
 
 ## Installation
 ```sh
