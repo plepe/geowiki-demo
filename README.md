@@ -4,6 +4,7 @@ A small web app for testing [leaflet-geowiki](https://github.com/plepe/leaflet-g
 ## Installation
 ```sh
 git clone https://github.com/plepe/geowiki-demo
+cd geowiki-demo
 npm install
 ```
 
