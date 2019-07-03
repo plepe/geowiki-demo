@@ -3,6 +3,7 @@
 const { saveAs } = require('file-saver')
 
 require('leaflet')
+require('leaflet-polylineoffset')
 require('leaflet-geowiki/editor')
 
 let FileControl = L.Control.extend({
