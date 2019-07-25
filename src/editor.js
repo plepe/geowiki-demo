@@ -1,4 +1,4 @@
-/* global L:false */
+/* global L:false, Blob:false */
 
 const { saveAs } = require('file-saver')
 
