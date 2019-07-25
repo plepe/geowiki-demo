@@ -1,4 +1,4 @@
-/* global L:false, FileReader:false */
+/* global L:false */
 
 const { saveAs } = require('file-saver')
 

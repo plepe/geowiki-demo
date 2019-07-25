@@ -1,3 +1,5 @@
+/* global L:false, FileReader:false */
+
 module.exports = L.Control.extend({
   options: {
     position: 'topleft'
