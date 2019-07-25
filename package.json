@@ -3,12 +3,14 @@
   "version": "0.0.1",
   "description": "Demo application for leaflet-geowiki",
   "scripts": {
-    "build": "npm run build-editor",
+    "build": "npm run build-editor && npm run build-viewer",
     "build-editor": "browserify src/editor.js -o dist/editor.js",
+    "build-viewer": "browserify src/viewer.js -o dist/viewer.js",
     "install": "npm run build",
     "lint": "standard --fix src/*.js",
     "start": "http-server ./ -p 3000",
-    "watch-editor": "watchify --debug src/editor.js -o dist/editor.js -v"
+    "watch-editor": "watchify --debug src/editor.js -o dist/editor.js -v",
+    "watch-viewer": "watchify --debug src/viewer.js -o dist/viewer.js -v"
   },
   "dependencies": {
     "file-saver": "^2.0.2",
